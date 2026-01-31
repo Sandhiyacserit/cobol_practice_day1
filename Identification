@@ -1,0 +1,22 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ACCOUNTTYPE.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 ACC-TYPE       PIC X.
+
+       PROCEDURE DIVISION.
+       BEGIN.
+           DISPLAY "Enter Account Type Code (S/C): "
+           ACCEPT ACC-TYPE
+
+           EVALUATE ACC-TYPE
+               WHEN 'S'
+                   DISPLAY "Savings Account"
+               WHEN 'C'
+                   DISPLAY "Current Account"
+               WHEN OTHER
+                   DISPLAY "Invalid Account Type"
+           END-EVALUATE
+
+           STOP RUN.

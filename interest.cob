@@ -1,0 +1,49 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. INTEREST.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 PRINCIPAL      PIC 9(5).
+       01 RATE           PIC 9(3).
+       01 YEARS          PIC 9(3).
+       01 INTEREST-AMT   PIC 9(6).
+
+       PROCEDURE DIVISION.
+           DISPLAY "ENTER PRINCIPAL: "
+           ACCEPT PRINCIPAL
+
+           DISPLAY "ENTER RATE: "
+           ACCEPT RATE
+
+           DISPLAY "ENTER TIME (IN YEARS): "
+           ACCEPT YEARS
+
+           COMPUTE INTEREST-AMT =
+               (PRINCIPAL * RATE * YEARS) / 100
+
+           DISPLAY "INTEREST = " INTEREST-AMT
+           STOP RUN.
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. INTEREST.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 PRINCIPAL      PIC 9(5).
+       01 RATE           PIC 9(3).
+       01 TIME           PIC 9(3).
+       01 INTEREST-AMT   PIC 9(6).
+
+       PROCEDURE DIVISION.
+           DISPLAY "ENTER PRINCIPAL: "
+           ACCEPT PRINCIPAL
+
+           DISPLAY "ENTER RATE: "
+           ACCEPT RATE
+
+           DISPLAY "ENTER TIME: "
+           ACCEPT TIME
+
+           COMPUTE INTEREST-AMT = (PRINCIPAL * RATE * TIME) / 100
+
+           DISPLAY "INTEREST = " INTEREST-AMT
+           STOP RUN.
